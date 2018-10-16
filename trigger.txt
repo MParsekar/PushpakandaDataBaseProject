@@ -1,0 +1,21 @@
+
+Initial TRIGGERS
+TABLE		:WAREHOUSE
+EVENT		:Insert Trigger on warehouse when new product recieved from Saller
+ATTRIBUTE	:supply_quatity(AFTER ) 
+TIMING		:Firing a trigger when quantity of stock is increased 
+ACTION		:Assuming when new products are purchase from saller ,need to update the quanity of previous old stock of the store.
+
+TABLE		:INVENTORY
+EVENT		:Update Trigger on 
+ATTRIBUTE	:Quantity_Available (AFTER)
+TIMING		: the trigger must fired to see the stock available, because once the product is sold.
+ACTION		:Assuming when products moved  out from the store ,there must be  update on remaining stock inventory.because quantity will decrease.
+
+TABLE		:PERISHABLE PRODUCT
+EVENT		:log on trigger
+ATTRIBUTE	:EXPIRYDATE(AFTER)
+TIMING		:this trigger is fired to "check" the expiry date of the product .
+ACTION		:assuming the scenario  once the log on is done trigger will check for the expiry of the product and showing due date of the products,so that the product can be "stacked" properly
+ 
+		
